@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Home from './HomePage'
 import About from './About'
+import Skill from './Skill'
 
 const MainPage = () => {
   return (
@@ -11,8 +12,13 @@ const MainPage = () => {
       <section id="home">
         <Home/> 
       </section>
-      <section id="home">
+
+      <section id="about">
         <About/> 
+      </section>
+
+      <section id="skills">
+        <Skill />
       </section>
    </>
   )
