@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Home from './HomePage'
 import About from './About'
 import Skill from './Skill'
+import Project from './Project'
 
 const MainPage = () => {
   return (
@@ -19,6 +20,10 @@ const MainPage = () => {
 
       <section id="skills">
         <Skill />
+      </section>
+
+      <section id="projects">
+        <Project />
       </section>
    </>
   )
