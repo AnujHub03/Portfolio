@@ -4,6 +4,7 @@ import Home from './HomePage'
 import About from './About'
 import Skill from './Skill'
 import Project from './Project'
+import Connect from './Connect'
 
 const MainPage = () => {
   return (
@@ -24,6 +25,10 @@ const MainPage = () => {
 
       <section id="projects">
         <Project />
+      </section>
+
+      <section id="contact">
+        <Connect />
       </section>
    </>
   )
