@@ -12,11 +12,11 @@ const Project = () => {
       link: "#",
     },
     {
-      title: "Tic-Tac-Toe",
-      description: "Classic Project a sleek HTML/Bootstrap version.",
-      tech: ["HTML", "Bootstrap", "JavaScript"],
-      image: "src/assets/img/tictactoe.png",
-      link: "#",
+      title: "Shopping Website",
+      description: "A modern version with react of a shopping website.",
+      tech: ["React", "Tailwind" ,"DaisyUI", "JavaScript"],
+      image: "src/assets/img/Preview2.png",
+      link: "https://trial-shopping.vercel.app/",
     },
     {
       title: "React Hub",
