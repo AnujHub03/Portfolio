@@ -46,7 +46,7 @@ const Home = () => {
               <div className="absolute -inset-4 bg-gray-100 rounded-2xl -z-10 group-hover:bg-gray-200 transition-colors duration-500"></div>
 
               <img
-                src="src/assets/img/anujFullimg.jpeg"
+                src="src/assets/img/.jpeg"
                 alt="Anuj Hooda"
                 className="w-56 h-72 sm:w-72 sm:h-96 lg:w-[400px] lg:h-[550px] object-cover rounded-2xl shadow-2xl  hover:scale-[1.02] transition-transform duration-500"
               />

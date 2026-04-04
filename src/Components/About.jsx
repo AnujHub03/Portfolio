@@ -17,7 +17,7 @@ const About = () => {
         <div className="relative flex justify-center">
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-gray-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
           <img
-            src="src/assets/img/me.jpeg"
+            src="src/assets/img/anujFullimg.jpeg"
             alt="Anuj Hooda"
             className="relative z-10 w-full max-w-sm lg:max-w-md rounded-2xl shadow-2xl object-cover hover:scale-[1.02] transition-transform duration-500"
           />
