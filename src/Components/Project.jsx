@@ -3,14 +3,6 @@ import React from "react";
 
 const Project = () => {
   const projectList = [
-    // {
-    //   title: "Snake and Ladders",
-    //   description:
-    //     "A fully functional digital board game with custom logic and responsive UI.",
-    //   tech: ["React", "Tailwind", "Game Logic"],
-    //   image: "src/assets/img/snake-game.png",
-    //   link: "#",
-    // },
     {
       title: "Shopping Website",
       description: "A modern version with react of a shopping website.",
@@ -25,6 +17,14 @@ const Project = () => {
       tech: ["React", "Vite", "Tailwind"],
       image: "src/assets/img/Preview3.png",
       link: "https://react-projects-beta-lilac.vercel.app",
+    },
+    {
+      title: "Digital Marketing Website",
+      description:
+        "A fully functional digital website with modern design and responsive UI.",
+      tech: ["React", "Tailwind", "DaisyUI", "JavaScript"],
+      image: "src/assets/img/.png",
+      link: "#",
     },
   ];
 
