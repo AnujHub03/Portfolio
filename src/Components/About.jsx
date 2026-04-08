@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   const handleScrollToProjects = () => {
@@ -8,23 +9,58 @@ const About = () => {
     }
   };
 
+  // Variants for the container
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3 }
+    }
+  };
+
+  // Slide up for text elements
+  const textVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  };
+
+  // Pop in for cards
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  };
+
   return (
     <div
       id="about"
-      className="min-h-screen bg-white flex items-center justify-center px-6 lg:px-20 py-20"
+      className="min-h-screen bg-white flex items-center justify-center px-6 lg:px-20 py-20 overflow-hidden"
     >
-      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div className="relative flex justify-center">
+      <motion.div 
+        className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+      >
+        {/* Left Side: Image with Slide-in */}
+        <motion.div 
+          className="relative flex justify-center"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-gray-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
           <img
             src="src/assets/img/anujFullimg.jpeg"
             alt="Anuj Hooda"
             className="relative z-10 w-full max-w-sm lg:max-w-md rounded-2xl shadow-2xl object-cover hover:scale-[1.02] transition-transform duration-500"
           />
-        </div>
+        </motion.div>
 
+        {/* Right Side: Content */}
         <div className="space-y-8">
-          <div className="space-y-4">
+          <motion.div className="space-y-4" variants={textVariants}>
             <h2 className="text-4xl lg:text-6xl font-extrabold text-black">
               About <span className="text-gray-400">Me</span>
             </h2>
@@ -38,25 +74,35 @@ const About = () => {
               game dashboards and a website with a combination of various react
               projects.
             </p>
-          </div>
+          </motion.div>
 
+          {/* Tech Cards with Pop-in Animation */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-6 bg-gray-200 rounded-2xl border border-transparent hover:border-gray-200 transition-all shadow-sm">
+            <motion.div 
+              variants={cardVariants}
+              whileHover={{ y: -5 }}
+              className="p-6 bg-gray-200 rounded-2xl border border-transparent hover:border-gray-300 transition-all shadow-sm"
+            >
               <h3 className="font-bold text-xl mb-2 text-black">Frontend</h3>
               <p className="text-sm text-gray-500 font-medium">
                 React, Tailwind, DaisyUI
               </p>
-            </div>
+            </motion.div>
 
-            <div className="p-6 bg-black text-white rounded-2xl shadow-lg transform translate-y-2">
+            <motion.div 
+              variants={cardVariants}
+              whileHover={{ y: -5 }}
+              className="p-6 bg-black text-white rounded-2xl shadow-lg transform translate-y-2"
+            >
               <h3 className="font-bold text-xl mb-2">Backend</h3>
               <p className="text-sm text-gray-400 font-medium">
                 Node.js, Express, MongoDB
               </p>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="pt-6">
+          {/* Button Animation */}
+          <motion.div className="pt-6" variants={textVariants}>
             <button
               onClick={handleScrollToProjects}
               className="group flex items-center gap-2 border-b-2 border-black pb-1 font-bold text-lg text-gray-800 hover:text-black hover:border-gray-400 transition-all"
@@ -66,9 +112,9 @@ const About = () => {
                 &rarr;
               </span>
             </button>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
