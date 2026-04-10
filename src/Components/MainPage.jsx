@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Home from './HomePage'
+import Home from '../Page/HomePage'
 import About from './About'
 import Skill from './Skill'
 import Project from './Project'
