@@ -10,7 +10,7 @@ const MainPage = () => {
   return (
    <>
     <Navbar/>
-
+{/* this page contains every components into one page in order to maintain the page to scroll */}
       <section id="home">
         <Home/> 
       </section>
