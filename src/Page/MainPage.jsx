@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Home from '../Page/HomePage'
-import About from './About'
-import Skill from './Skill'
-import Project from './Project'
-import Connect from './Connect'
+import Navbar from '../Components/Navbar'
+import Home from '../Components/HomePage'
+import About from '../Components/About'
+import Skill from '../Components/Skill'
+import Project from '../Components/Project'
+import Connect from '../Components/Connect'
 
 const MainPage = () => {
   return (
