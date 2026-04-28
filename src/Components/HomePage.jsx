@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import bg from "../assets/img/background.png";
 import bghero from "../assets/img/heroimg1.png";
+import myCV from "../assets/doc/myCV.pdf";
 
 const Home = () => {
   // Animation Variants
@@ -23,7 +24,14 @@ const Home = () => {
       transition: { duration: 0.8, ease: "easeOut" } 
     },
   };
-
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = myCV;
+    link.download = "Anuj_Hooda_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div  style={{ backgroundImage: `url(${bg})` }} className=" bg-cover bg-center min-h-screen flex items-center justify-center px-6 py-12 lg:px-20">
       <motion.div 
@@ -71,6 +79,7 @@ const Home = () => {
             </a>
 
             <button
+             onClick={handleDownload}
               className="border-2 border-gray-300 hover:border-black text-gray-700 px-10 py-3 rounded-md transition-all duration-300 hover:shadow-lg font-semibold"
             >
               Download CV
