@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import project1 from "../assets/img/Preview2.png";
+import project2 from "../assets/img/Preview3.png";
+import project3 from "../assets/img/project3.png";
 
 const Project = () => {
   const projectList = [
@@ -7,21 +10,21 @@ const Project = () => {
       title: "Shopping Website",
       description: "A modern version with react of a shopping website.",
       tech: ["React", "Tailwind", "DaisyUI", "JavaScript"],
-      image: "src/assets/img/Preview2.png",
+      image: project1,
       link: "https://trial-shopping.vercel.app/",
     },
     {
       title: "React Hub",
       description: "A website hosted on GitHub, featuring various react projects in single website.",
       tech: ["React", "Vite", "Tailwind"],
-      image: "src/assets/img/Preview3.png",
+      image: project2,
       link: "https://react-projects-beta-lilac.vercel.app",
     },
     {
       title: "Digital Marketing Website",
       description: "A fully functional digital website with modern design and responsive UI.",
       tech: ["React", "Tailwind", "DaisyUI", "JavaScript"],
-      image: "src/assets/img/project3.png", 
+      image: project3, 
       link: "https://digital-marketing-website-project.vercel.app/",
     },
   ];

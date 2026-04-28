@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import bg from "../assets/img/background.png";
+import bghero from "../assets/img/heroimg1.png";
 
 const Home = () => {
   // Animation Variants
@@ -23,7 +25,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[url('src/assets/img/background.png')] bg-cover bg-center min-h-screen flex items-center justify-center px-6 py-12 lg:px-20">
+    <div  style={{ backgroundImage: `url(${bg})` }} className=" bg-cover bg-center min-h-screen flex items-center justify-center px-6 py-12 lg:px-20">
       <motion.div 
         className="flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-5xl gap-10 lg:gap-16"
         variants={containerVariants}
@@ -85,7 +87,7 @@ const Home = () => {
         >
           <div className="relative group">
             <motion.img
-              src="src/assets/img/heroimg1.png"
+              src={bghero}
               alt="Anuj Hooda"
               className="w-56 h-72 sm:w-72 sm:h-96 lg:w-[400px] lg:h-[550px] object-cover rounded-2xl "
               // Floating animation
